@@ -4,12 +4,9 @@ import { useState } from 'react';
 
 const FOOTER_LINKS = {
   Services: [
+    { label: 'ATS Resume', href: '/services/ats-resume-writing' },
     { label: 'Recruitment', href: '/services/recruitment' },
-    { label: 'HR Consulting', href: '/services/hr-consulting' },
-    { label: 'Talent Acquisition', href: '/services/talent-acquisition' },
-    { label: 'ATS Resume Writing', href: '/services/ats-resume-writing' },
-    { label: 'LinkedIn Optimisation', href: '/services/linkedin-optimization' },
-    { label: 'Employee Retention', href: '/services/employee-retention' },
+    { label: 'LinkedIn Optimization', href: '/services/linkedin-optimization' },
   ],
   'HR Tools': [
     { label: 'Attrition Predictor', href: '/hr-tools/attrition-predictor' },
@@ -19,7 +16,6 @@ const FOOTER_LINKS = {
   ],
   Company: [
     { label: 'About', href: '/about' },
-    { label: 'Industries', href: '/industries' },
     { label: 'Case Studies', href: '/case-studies' },
     { label: 'Blog', href: '/blog' },
     { label: 'FAQ', href: '/faq' },
