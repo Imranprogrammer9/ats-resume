@@ -1,11 +1,11 @@
 const ROW_ONE = [
-  'Meridian Financial', 'TechCore Solutions', 'NovaMed Healthcare',
-  'Apex Retail Group', 'Continental Logistics', 'Clearstone Capital',
+  'Financial Services', 'Technology & SaaS', 'Healthcare & MedTech',
+  'Retail & E-commerce', 'Logistics & Supply Chain', 'Energy & Utilities',
 ];
 
 const ROW_TWO = [
-  'Vertex Systems', 'Horizon Consulting', 'PrimeForce HR',
-  'Elevate Pharma', 'NextGen Education', 'Bridgewater & Co.',
+  'Professional Services', 'Manufacturing & Industry', 'Education & EdTech',
+  'Biotech & Pharma', 'Hospitality & Leisure', 'Real Estate & Construction',
 ];
 
 function MarqueeRow({ items, reverse = false }: { items: string[]; reverse?: boolean }) {
@@ -48,8 +48,8 @@ export default function TrustedBy() {
       style={{ background: '#0E1F15' }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8 text-center">
-        <p className="section-label">Trusted By</p>
-        <p className="text-slate-light text-sm font-light">HR leaders at leading organisations trust HR Vanguard</p>
+        <p className="section-label">Sectors Covered</p>
+        <p className="text-slate-light text-sm font-light">Tailored HR frameworks for leaders across major industries</p>
       </div>
       <div className="flex flex-col gap-4">
         <MarqueeRow items={ROW_ONE} />
