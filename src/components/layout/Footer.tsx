@@ -11,8 +11,6 @@ const FOOTER_LINKS = {
   'HR Tools': [
     { label: 'Attrition Predictor', href: '/hr-tools/attrition-predictor' },
     { label: 'Resume Analyzer', href: '/hr-tools' },
-    { label: 'Salary Benchmark', href: '/hr-tools' },
-    { label: 'Interview Scorecard', href: '/hr-tools' },
   ],
   Company: [
     { label: 'About', href: '/about' },

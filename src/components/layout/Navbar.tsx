@@ -32,8 +32,6 @@ const NAV_ITEMS: NavItem[] = [
     children: [
       { label: 'Attrition Predictor', href: '/hr-tools/attrition-predictor', badge: 'Live' },
       { label: 'Resume Analyzer', href: '/hr-tools', badge: 'Soon' },
-      { label: 'Salary Benchmark', href: '/hr-tools', badge: 'Soon' },
-      { label: 'Interview Scorecard', href: '/hr-tools', badge: 'Soon' },
     ],
   },
   { label: 'Blog', href: '/blog' },
