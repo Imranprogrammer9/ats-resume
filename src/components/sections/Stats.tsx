@@ -59,7 +59,7 @@ export default function Stats() {
   return (
     <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-forest/[0.07] border border-forest/[0.07] rounded-2xl overflow-hidden shadow-soft">
+        <div className="grid grid-cols-1 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-forest/[0.07] border border-forest/[0.07] rounded-2xl overflow-hidden shadow-soft">
           {STATS.map((stat, i) => (
             <StatCard key={stat.label} {...stat} index={i} />
           ))}

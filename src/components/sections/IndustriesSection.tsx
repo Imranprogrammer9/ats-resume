@@ -35,7 +35,7 @@ export default function IndustriesSection() {
           </Link>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {INDUSTRIES.map((industry, i) => {
             const Icon = ICON_MAP[industry.icon] || Briefcase;
             return (

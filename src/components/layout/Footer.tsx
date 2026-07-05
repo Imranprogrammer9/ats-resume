@@ -100,7 +100,7 @@ export default function Footer() {
             </h4>
             <p className="text-slate-brand text-sm">SHRM-aligned articles on retention, recruitment, and workforce analytics. No spam, ever.</p>
           </div>
-          <div className="flex-shrink-0 min-w-[320px]">
+          <div className="w-full sm:w-auto sm:min-w-[320px] flex-shrink-0">
             {submitted ? (
               <p className="text-brass-light text-sm font-medium py-3">You're subscribed. Thank you.</p>
             ) : (
