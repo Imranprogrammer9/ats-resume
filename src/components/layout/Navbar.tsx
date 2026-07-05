@@ -36,7 +36,6 @@ const NAV_ITEMS: NavItem[] = [
       { label: 'Interview Scorecard', href: '/hr-tools', badge: 'Soon' },
     ],
   },
-  { label: 'Industries', href: '/industries' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ];
