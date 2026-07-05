@@ -21,15 +21,9 @@ const NAV_ITEMS: NavItem[] = [
     label: 'Services',
     href: '/services',
     children: [
+      { label: 'ATS Resume', href: '/services/ats-resume-writing' },
       { label: 'Recruitment', href: '/services/recruitment' },
-      { label: 'HR Consulting', href: '/services/hr-consulting' },
-      { label: 'Talent Acquisition', href: '/services/talent-acquisition' },
-      { label: 'ATS Resume Writing', href: '/services/ats-resume-writing' },
-      { label: 'LinkedIn Optimisation', href: '/services/linkedin-optimization' },
-      { label: 'Employee Retention', href: '/services/employee-retention' },
-      { label: 'Workforce Analytics', href: '/services/workforce-analytics' },
-      { label: 'Training & Development', href: '/services/training-development' },
-      { label: 'HR Policy Development', href: '/services/hr-policy-development' },
+      { label: 'LinkedIn Optimization', href: '/services/linkedin-optimization' },
     ],
   },
   {
