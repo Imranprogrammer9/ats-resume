@@ -2,7 +2,6 @@ import Hero from '../components/sections/Hero';
 import Stats from '../components/sections/Stats';
 import TrustedBy from '../components/sections/TrustedBy';
 import FeaturedServices from '../components/sections/FeaturedServices';
-import WhyChooseUs from '../components/sections/WhyChooseUs';
 import HRTechPlatform from '../components/sections/HRTechPlatform';
 import AttritionPreview from '../components/sections/AttritionPreview';
 import ProcessTimeline from '../components/sections/ProcessTimeline';
@@ -19,7 +18,6 @@ export default function Home() {
       <Stats />
       <TrustedBy />
       <FeaturedServices />
-      <WhyChooseUs />
       <HRTechPlatform />
       <AttritionPreview />
       <ProcessTimeline />
