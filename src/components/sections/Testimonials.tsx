@@ -13,8 +13,8 @@ const BENTO_LAYOUT = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 overflow-hidden relative" style={{ background: '#0E1F15' }}>
-      <div className="dot-grid-light absolute inset-0 pointer-events-none" />
+    <section className="py-24 bg-white overflow-hidden relative">
+      <div className="dot-grid absolute inset-0 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -24,9 +24,9 @@ export default function Testimonials() {
           className="text-center mb-14"
         >
           <span className="section-label">Client Testimonials</span>
-          <h2 className="text-white mt-2" style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 700, lineHeight: 1.18, letterSpacing: '-0.02em', marginBottom: '0.6rem' }}>
+          <h2 className="text-forest mt-2" style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 700, lineHeight: 1.18, letterSpacing: '-0.02em', marginBottom: '0.6rem' }}>
             What Our{' '}
-            <span className="text-brass-light" style={{ fontStyle: 'italic' }}>Clients</span> Say
+            <span className="text-brass" style={{ fontStyle: 'italic' }}>Clients</span> Say
           </h2>
           <div className="gold-rule mx-auto" />
         </motion.div>
@@ -39,8 +39,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] }}
-              className={`rounded-2xl border p-7 flex flex-col gap-5 relative overflow-hidden group transition-all duration-300 hover:-translate-y-1 ${BENTO_LAYOUT[i]}`}
-              style={{ background: 'rgba(255,255,255,0.05)', borderColor: 'rgba(255,255,255,0.09)' }}
+              className={`rounded-2xl border p-7 flex flex-col gap-5 relative overflow-hidden group transition-all duration-300 hover:-translate-y-1 hover:shadow-medium border-forest/[0.07] bg-sand hover:border-brass/25 ${BENTO_LAYOUT[i]}`}
             >
               {/* Hover glow */}
               <div
@@ -60,23 +59,23 @@ export default function Testimonials() {
 
               {/* Quote text */}
               <blockquote
-                className="text-white leading-relaxed flex-1"
+                className="text-forest leading-relaxed flex-1 font-light"
                 style={{ fontFamily: 'Poppins, sans-serif', fontSize: i === 0 || i === 1 ? '1.05rem' : '0.9rem', fontStyle: 'italic' }}
               >
                 "{t.quote}"
               </blockquote>
 
               {/* Author */}
-              <div className="flex items-center gap-3 mt-4 pt-5 border-t" style={{ borderColor: 'rgba(255,255,255,0.07)' }}>
-                <div className="w-10 h-10 rounded-full bg-brass/20 border border-brass/30 flex items-center justify-center flex-shrink-0">
-                  <span className="text-brass-light font-bold text-xs" style={{ fontFamily: 'Poppins, sans-serif' }}>{t.initials}</span>
+              <div className="flex items-center gap-3 mt-4 pt-5 border-t border-forest/[0.06]">
+                <div className="w-10 h-10 rounded-full bg-brass/10 border border-brass/20 flex items-center justify-center flex-shrink-0">
+                  <span className="text-brass font-bold text-xs" style={{ fontFamily: 'Poppins, sans-serif' }}>{t.initials}</span>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="font-semibold text-white text-sm truncate mb-0.5">{t.name}</div>
-                  <div className="text-slate-light text-xs truncate mb-0.5">{t.role}</div>
-                  <div className="text-brass-light text-xs font-medium truncate mt-0.5">{t.company}</div>
+                  <div className="font-semibold text-forest text-sm truncate mb-0.5">{t.name}</div>
+                  <div className="text-slate-brand text-xs truncate mb-0.5">{t.role}</div>
+                  <div className="text-brass text-xs font-medium truncate mt-0.5">{t.company}</div>
                 </div>
-                <span className="text-2xs font-semibold tracking-wider border rounded-full px-2.5 py-1 flex-shrink-0 hidden sm:block" style={{ background: 'rgba(255,255,255,0.06)', borderColor: 'rgba(255,255,255,0.10)', color: '#8FA89A' }}>
+                <span className="text-2xs font-semibold tracking-wider border border-forest/[0.08] bg-forest/[0.04] text-slate-brand rounded-full px-2.5 py-1 flex-shrink-0 hidden sm:block">
                   {t.industry}
                 </span>
               </div>

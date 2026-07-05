@@ -13,8 +13,8 @@ const MOCK_FACTORS = [
 
 export default function AttritionPreview() {
   return (
-    <section className="py-24 bg-forest-dark relative overflow-hidden" style={{ background: '#0E1F15' }}>
-      <div className="dot-grid-light absolute inset-0 pointer-events-none" />
+    <section className="py-24 bg-white relative overflow-hidden">
+      <div className="dot-grid absolute inset-0 pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
@@ -24,19 +24,19 @@ export default function AttritionPreview() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="text-2xs font-semibold tracking-[0.16em] uppercase text-brass-light block mb-4">
+            <span className="text-2xs font-semibold tracking-[0.16em] uppercase text-brass block mb-4">
               Flagship HR Tool
             </span>
             <h2
-              className="text-white mb-4"
+              className="text-forest mb-4"
               style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(2rem, 3.5vw, 3rem)', fontWeight: 700, lineHeight: 1.1 }}
             >
               Predict Employee{' '}
-              <span style={{ fontStyle: 'italic', color: '#D4A84B' }}>Attrition</span>{' '}
+              <span style={{ fontStyle: 'italic', color: '#B5852A' }}>Attrition</span>{' '}
               Before It's Too Late
             </h2>
             <div className="w-10 h-0.5 bg-brass mb-5" />
-            <p className="text-slate-light font-light leading-relaxed mb-6">
+            <p className="text-slate-brand font-light leading-relaxed mb-6">
               Our Employee Attrition Predictor uses a weighted scoring engine across 6 risk dimensions and 18 calibrated questions to produce an instant, actionable risk score — with specific recommended interventions.
             </p>
 
@@ -48,7 +48,7 @@ export default function AttritionPreview() {
                 { icon: CheckCircle, text: 'CSV export and Google Sheets integration' },
                 { icon: AlertTriangle, text: 'Completely free to use — unlimited assessments' },
               ].map(({ icon: Icon, text }) => (
-                <div key={text} className="flex items-start gap-3 text-sm text-slate-light">
+                <div key={text} className="flex items-start gap-3 text-sm text-slate-brand">
                   <Icon size={15} className="text-brass flex-shrink-0 mt-0.5" />
                   {text}
                 </div>
@@ -68,15 +68,15 @@ export default function AttritionPreview() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+            <div className="bg-sand border border-forest/[0.07] shadow-medium rounded-2xl p-6">
               <div className="flex items-center justify-between mb-5">
                 <div>
-                  <p className="text-brass-light text-2xs font-semibold tracking-wider uppercase">Risk Score Report</p>
-                  <p className="text-white font-semibold text-sm mt-0.5">Sample Employee · Sales Dept</p>
+                  <p className="text-brass text-2xs font-semibold tracking-wider uppercase">Risk Score Report</p>
+                  <p className="text-forest font-semibold text-sm mt-0.5">Sample Employee · Sales Dept</p>
                 </div>
                 <div className="text-center">
                   <svg width="72" height="72" viewBox="0 0 72 72">
-                    <circle cx="36" cy="36" r="26" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="7" />
+                    <circle cx="36" cy="36" r="26" fill="none" stroke="rgba(14,31,21,0.06)" strokeWidth="7" />
                     <circle
                       cx="36"
                       cy="36"
@@ -90,9 +90,9 @@ export default function AttritionPreview() {
                       transform="rotate(-90 36 36)"
                     />
                     <text x="36" y="33" textAnchor="middle" fill="#f97316" fontSize="12" fontWeight="900" fontFamily="monospace">6.48</text>
-                    <text x="36" y="44" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="7" fontFamily="sans-serif">/ 10</text>
+                    <text x="36" y="44" textAnchor="middle" fill="rgba(14,31,21,0.4)" fontSize="7" fontFamily="sans-serif">/ 10</text>
                   </svg>
-                  <div className="text-2xs font-bold text-orange-400 tracking-wider mt-1">HIGH RISK</div>
+                  <div className="text-2xs font-bold text-orange-600 tracking-wider mt-1">HIGH RISK</div>
                 </div>
               </div>
 
@@ -100,15 +100,15 @@ export default function AttritionPreview() {
                 {MOCK_FACTORS.map((f) => (
                   <div key={f.label}>
                     <div className="flex justify-between items-center mb-1">
-                      <span className="text-slate-light text-xs">{f.label}</span>
+                      <span className="text-slate-brand text-xs">{f.label}</span>
                       <div className="flex items-center gap-2">
-                        <span className="text-slate-brand text-2xs">{f.weight}</span>
+                        <span className="text-slate-brand/60 text-2xs">{f.weight}</span>
                         <span className="font-mono text-xs font-bold" style={{ color: f.color }}>
                           {(f.score * parseFloat(f.weight) / 100).toFixed(2)}
                         </span>
                       </div>
                     </div>
-                    <div className="h-1.5 bg-white/8 rounded-full overflow-hidden">
+                    <div className="h-1.5 bg-forest/5 rounded-full overflow-hidden">
                       <motion.div
                         className="h-full rounded-full"
                         style={{ background: f.color }}
@@ -123,11 +123,11 @@ export default function AttritionPreview() {
               </div>
 
               <div className="mt-5 p-3.5 bg-orange-500/10 border border-orange-500/20 rounded-lg">
-                <p className="text-orange-400 text-2xs font-bold tracking-wider uppercase mb-2">Recommended Actions</p>
-                <p className="text-slate-light text-xs">Immediate manager intervention · Conduct stay interview within 7 days · Escalate compensation review...</p>
+                <p className="text-orange-600 text-2xs font-bold tracking-wider uppercase mb-2">Recommended Actions</p>
+                <p className="text-slate-brand text-xs">Immediate manager intervention · Conduct stay interview within 7 days · Escalate compensation review...</p>
               </div>
 
-              <p className="text-slate-brand text-2xs text-center mt-4">
+              <p className="text-slate-brand/60 text-2xs text-center mt-4">
                 Demo data for illustration · Your results will reflect real assessment answers
               </p>
             </div>
