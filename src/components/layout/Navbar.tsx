@@ -3,7 +3,19 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 
-const NAV_ITEMS = [
+interface DropdownItem {
+  label: string;
+  href: string;
+  badge?: string;
+}
+
+interface NavItem {
+  label: string;
+  href: string;
+  children?: DropdownItem[];
+}
+
+const NAV_ITEMS: NavItem[] = [
   { label: 'About', href: '/about' },
   {
     label: 'Services',
@@ -34,12 +46,6 @@ const NAV_ITEMS = [
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ];
-
-interface DropdownItem {
-  label: string;
-  href: string;
-  badge?: string;
-}
 
 function Dropdown({ items, isOpen }: { items: DropdownItem[]; isOpen: boolean }) {
   return (
@@ -82,6 +88,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -94,6 +101,12 @@ export default function Navbar() {
     setMobileOpen(false);
     setOpenDropdown(null);
   }, [location.pathname]);
+
+  useEffect(() => {
+    if (!mobileOpen) {
+      setActiveAccordion(null);
+    }
+  }, [mobileOpen]);
 
   return (
     <header
@@ -181,29 +194,56 @@ export default function Navbar() {
             <div className="px-6 py-4 flex flex-col gap-1">
               {NAV_ITEMS.map((item) => (
                 <div key={item.label}>
-                  <Link
-                    to={item.href}
-                    className="block py-3 text-sm font-medium text-forest hover:text-brass transition-colors border-b border-forest/[0.06]"
-                  >
-                    {item.label}
-                  </Link>
+                  {item.children ? (
+                    <button
+                      onClick={() => setActiveAccordion(activeAccordion === item.label ? null : item.label)}
+                      className="flex items-center justify-between w-full py-3 text-sm font-medium text-forest hover:text-brass transition-colors border-b border-forest/[0.06] text-left"
+                    >
+                      <span>{item.label}</span>
+                      <ChevronDown
+                        size={16}
+                        className={`transition-transform duration-200 text-forest/60 ${
+                          activeAccordion === item.label ? 'rotate-180 text-brass' : ''
+                        }`}
+                      />
+                    </button>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="block py-3 text-sm font-medium text-forest hover:text-brass transition-colors border-b border-forest/[0.06]"
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                   {item.children && (
-                    <div className="pl-4 flex flex-col gap-0.5 pb-2">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href + child.label}
-                          to={child.href}
-                          className="py-2 text-xs text-slate-brand hover:text-brass-light transition-colors flex items-center gap-2"
+                    <AnimatePresence initial={false}>
+                      {activeAccordion === item.label && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.2, ease: 'easeInOut' }}
+                          className="overflow-hidden"
                         >
-                          {child.label}
-                          {child.badge && (
-                            <span className="text-2xs bg-brass/10 text-brass px-1.5 py-0.5 rounded font-bold">
-                              {child.badge}
-                            </span>
-                          )}
-                        </Link>
-                      ))}
-                    </div>
+                          <div className="pl-4 flex flex-col gap-0.5 pb-2">
+                            {item.children.map((child) => (
+                              <Link
+                                key={child.href + child.label}
+                                to={child.href}
+                                className="py-2 text-xs text-slate-brand hover:text-brass-light transition-colors flex items-center gap-2"
+                              >
+                                {child.label}
+                                {child.badge && (
+                                  <span className="text-2xs bg-brass/10 text-brass px-1.5 py-0.5 rounded font-bold">
+                                    {child.badge}
+                                  </span>
+                                )}
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   )}
                 </div>
               ))}
