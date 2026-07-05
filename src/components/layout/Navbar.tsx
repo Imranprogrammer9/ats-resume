@@ -219,7 +219,7 @@ export default function Navbar() {
                           transition={{ duration: 0.2, ease: 'easeInOut' }}
                           className="overflow-hidden"
                         >
-                          <div className="pl-4 flex flex-col gap-0.5 pb-2">
+                          <div className="pl-4 flex flex-col gap-0.5 pt-2 pb-3">
                             {item.children.map((child) => (
                               <Link
                                 key={child.href + child.label}
