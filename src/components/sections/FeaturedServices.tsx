@@ -8,10 +8,7 @@ const ICON_MAP: Record<string, React.FC<{ size?: number; className?: string }>> 
 
 const FEATURED = [
   { icon: 'Users', title: 'Recruitment', tagline: 'Precision Hiring at Scale', description: 'End-to-end recruitment solutions combining structured interviewing, skills-based assessment, and market intelligence to eliminate hiring guesswork.', href: '/services/recruitment', highlight: false },
-  { icon: 'Briefcase', title: 'HR Consulting', tagline: 'Strategic HR Partnership', description: 'Strategic HR advisory embedding as your partner — aligning people strategy with business objectives for measurable organisational impact.', href: '/services/hr-consulting', highlight: true },
-  { icon: 'Heart', title: 'Employee Retention', tagline: 'Keep Your Best People', description: 'Data-driven retention programmes using our proprietary Attrition Predictor to identify flight risks and implement targeted interventions.', href: '/services/employee-retention', highlight: false },
-  { icon: 'Target', title: 'Talent Acquisition', tagline: 'Build Your Talent Pipeline', description: 'Proactive talent pipeline development using Boolean search, passive candidate engagement, and employer brand amplification.', href: '/services/talent-acquisition', highlight: false },
-  { icon: 'FileText', title: 'ATS Resume Writing', tagline: 'Diagnostic-First CV Transformation', description: 'The only diagnostic-first ATS CV service. Gap analysis before writing — not a template, a real consultation.', href: '/services/ats-resume-writing', highlight: false },
+  { icon: 'FileText', title: 'ATS Resume Writing', tagline: 'Diagnostic-First CV Transformation', description: 'The only diagnostic-first ATS CV service. Gap analysis before writing — not a template, a real consultation.', href: '/services/ats-resume-writing', highlight: true },
   { icon: 'BarChart2', title: 'Workforce Analytics', tagline: 'Turn People Data Into Strategy', description: 'Transform raw HR data into actionable workforce intelligence with custom dashboards and executive people reporting.', href: '/services/workforce-analytics', highlight: false },
 ];
 
