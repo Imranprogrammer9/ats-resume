@@ -41,20 +41,20 @@ export default function Footer() {
                 HR <span className="text-brass-light">Vanguard</span>
               </span>
             </Link>
-            <p className="text-slate-brand text-sm font-light leading-relaxed mb-6 max-w-xs">
+            <p className="text-white text-sm font-light leading-relaxed mb-6 max-w-xs">
               Helping businesses hire better, retain top talent, and build high-performing teams through expert HR consulting and innovative HR technology.
             </p>
 
             <div className="flex flex-col gap-3 mb-6">
-              <a href="mailto:hello@hrvanguard.com" className="flex items-center gap-2.5 text-sm text-slate-light hover:text-brass-light transition-colors">
+              <a href="mailto:hello@hrvanguard.com" className="flex items-center gap-2.5 text-sm text-white hover:text-brass-light transition-colors">
                 <Mail size={14} className="text-brass flex-shrink-0" />
                 hello@hrvanguard.com
               </a>
-              <div className="flex items-center gap-2.5 text-sm text-slate-light">
+              <div className="flex items-center gap-2.5 text-sm text-white">
                 <Phone size={14} className="text-brass flex-shrink-0" />
                 +1 (555) 000-0000
               </div>
-              <div className="flex items-center gap-2.5 text-sm text-slate-light">
+              <div className="flex items-center gap-2.5 text-sm text-white">
                 <MapPin size={14} className="text-brass flex-shrink-0" />
                 Global · Remote-First
               </div>
@@ -76,7 +76,7 @@ export default function Footer() {
               <ul className="flex flex-col gap-2.5">
                 {links.map((link) => (
                   <li key={link.href + link.label}>
-                    <Link to={link.href} className="text-slate-brand text-sm hover:text-brass-light transition-colors">
+                    <Link to={link.href} className="text-white text-sm hover:text-brass-light transition-colors">
                       {link.label}
                     </Link>
                   </li>
