@@ -92,7 +92,7 @@ export default function Footer() {
             <h4 className="text-xl font-bold text-white mb-1" style={{ fontFamily: 'Poppins, sans-serif' }}>
               HR Insights, Delivered Monthly
             </h4>
-            <p className="text-slate-brand text-sm">SHRM-aligned articles on retention, recruitment, and workforce analytics. No spam, ever.</p>
+            <p className="text-white/70 text-sm font-light">SHRM-aligned articles on retention, recruitment, and workforce analytics. No spam, ever.</p>
           </div>
           <div className="w-full sm:w-auto sm:min-w-[320px] flex-shrink-0">
             {submitted ? (
