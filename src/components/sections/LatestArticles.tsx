@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Clock, User } from 'lucide-react';
+import { ArrowRight, Clock } from 'lucide-react';
 import { BLOG_POSTS } from '../../data/blog';
 
 export default function LatestArticles() {
@@ -86,24 +86,7 @@ export default function LatestArticles() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-8 flex items-start gap-4 rounded-xl p-5 border"
-          style={{ background: 'rgba(181,133,42,0.07)', borderColor: 'rgba(181,133,42,0.20)' }}
-        >
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: 'rgba(181,133,42,0.15)' }}>
-            <User size={14} className="text-brass-light" />
-          </div>
-          <div>
-            <p className="text-white text-sm font-medium mb-0.5">SHRM Content Standard</p>
-            <p className="text-slate-light text-xs font-light leading-relaxed">
-              Every article published on HR Vanguard is personally reviewed against SHRM (Society for Human Resource Management) guidelines — ensuring accuracy, relevance, and professional integrity.
-            </p>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

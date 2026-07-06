@@ -61,12 +61,6 @@ export default function BlogPost() {
                 <p className="text-slate-brand font-light leading-relaxed mb-6">
                   The HR Vanguard blog publishes practical, evidence-based content on human resources management, talent acquisition, employee retention, and workforce analytics — all reviewed against SHRM guidelines before publication.
                 </p>
-                <div className="bg-brass/8 border border-brass/25 rounded-xl p-5 mt-8">
-                  <p className="text-forest text-sm font-medium mb-1">SHRM Content Standard</p>
-                  <p className="text-slate-brand text-xs font-light leading-relaxed">
-                    This article has been reviewed against SHRM (Society for Human Resource Management) guidelines to ensure accuracy and professional integrity.
-                  </p>
-                </div>
               </div>
 
               <div className="flex items-center justify-between mt-6">
