@@ -50,10 +50,10 @@ export default function Footer() {
                 <Mail size={14} className="text-brass flex-shrink-0" />
                 hello@hrvanguard.com
               </a>
-              <div className="flex items-center gap-2.5 text-sm text-white">
+              <a href="tel:+923312935551" className="flex items-center gap-2.5 text-sm text-white hover:text-brass-light transition-colors">
                 <Phone size={14} className="text-brass flex-shrink-0" />
-                +1 (555) 000-0000
-              </div>
+                +92 331 2935551
+              </a>
               <div className="flex items-center gap-2.5 text-sm text-white">
                 <MapPin size={14} className="text-brass flex-shrink-0" />
                 Global · Remote-First
