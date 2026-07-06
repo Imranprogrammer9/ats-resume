@@ -236,7 +236,7 @@
     border-color: #B5852A;
     background: rgba(255,255,255,0.09);
   }
-  .input-field-dark::placeholder { color: #5C7266; }
+  .input-field-dark::placeholder { color: rgba(255, 255, 255, 0.4); }
 
   .dot-grid {
     background-image: radial-gradient(rgba(27, 58, 45, 0.07) 1px, transparent 1px);
