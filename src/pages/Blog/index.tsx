@@ -68,7 +68,7 @@ export default function BlogPage() {
           {filtered.length === 0 ? (
             <div className="text-center py-16 text-slate-brand">No articles found.</div>
           ) : (
-            <div className="grid gap-5" style={{ gridTemplateColumns: `repeat(${filtered.length}, minmax(0, 1fr))` }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {filtered.map((post, i) => (
                 <motion.div
                   key={post.id}
