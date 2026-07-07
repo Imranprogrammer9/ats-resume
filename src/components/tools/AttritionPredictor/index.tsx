@@ -64,7 +64,7 @@ export default function AttritionPredictor() {
   const isPrefilled = !!(lastEmp.department || lastEmp.role || lastEmp.manager);
 
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="max-w-7xl mx-auto">
       <AnimatePresence mode="wait">
         {step === 'emp-info' && (
           <EmpInfoStep
