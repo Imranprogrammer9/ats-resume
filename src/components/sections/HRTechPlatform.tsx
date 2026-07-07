@@ -1,14 +1,10 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Activity, FileSearch, DollarSign, ClipboardList, Smile, Star, ArrowRight, Lock } from 'lucide-react';
+import { Activity, FileSearch, ArrowRight, Lock } from 'lucide-react';
 
 const PRODUCTS = [
   { icon: Activity, title: 'Employee Attrition Predictor', description: '18-question weighted scoring engine across 6 risk dimensions. Instant risk score with action steps.', status: 'live', href: '/hr-tools/attrition-predictor', color: '#38bdf8' },
   { icon: FileSearch, title: 'Resume Analyzer', description: 'AI-powered ATS compatibility score and keyword gap analysis for any job description.', status: 'soon', href: '/hr-tools', color: '#34d399' },
-  { icon: DollarSign, title: 'Salary Benchmark Tool', description: 'Real-time compensation data for any role, industry, and location — powered by live market data.', status: 'soon', href: '/hr-tools', color: '#fbbf24' },
-  { icon: ClipboardList, title: 'Interview Scorecard', description: 'Structured interview templates with weighted scoring to ensure consistent, bias-reduced hiring decisions.', status: 'soon', href: '/hr-tools', color: '#a78bfa' },
-  { icon: Smile, title: 'Employee Satisfaction Survey', description: 'Pulse survey tool with benchmark comparisons and sentiment trend analysis across departments.', status: 'soon', href: '/hr-tools', color: '#f472b6' },
-  { icon: Star, title: 'Performance Review Generator', description: 'Data-driven performance review templates aligned to competency frameworks and business goals.', status: 'soon', href: '/hr-tools', color: '#fb923c' },
 ];
 
 export default function HRTechPlatform() {
@@ -36,7 +32,7 @@ export default function HRTechPlatform() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {PRODUCTS.map((product, i) => {
             const Icon = product.icon;
             const isLive = product.status === 'live';

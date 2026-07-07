@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Activity, FileSearch, DollarSign, ClipboardList, Smile, Star, ArrowRight, CheckCircle } from 'lucide-react';
+import { Activity, FileSearch, ArrowRight, CheckCircle } from 'lucide-react';
 
 const TOOLS = [
   {
@@ -22,46 +22,6 @@ const TOOLS = [
     status: 'soon',
     href: '#',
     color: '#34d399',
-  },
-  {
-    icon: DollarSign,
-    title: 'Salary Benchmark Tool',
-    tagline: 'Real-Time Compensation Intelligence',
-    description: 'Compare any role\'s salary against live market data by industry, location, and seniority. Instantly know if your compensation package is competitive.',
-    features: ['Live market data', 'Role + location + seniority filters', 'Percentile breakdown', 'Compensation strategy guide'],
-    status: 'soon',
-    href: '#',
-    color: '#fbbf24',
-  },
-  {
-    icon: ClipboardList,
-    title: 'Interview Scorecard',
-    tagline: 'Structured, Bias-Reduced Hiring',
-    description: 'Generate structured interview templates with weighted scoring criteria for any role. Ensure consistency across interviewers and reduce unconscious bias.',
-    features: ['Role-specific question banks', 'Weighted scoring criteria', 'Panel calibration tools', 'Decision documentation'],
-    status: 'soon',
-    href: '#',
-    color: '#a78bfa',
-  },
-  {
-    icon: Smile,
-    title: 'Employee Satisfaction Survey',
-    tagline: 'Pulse Surveys with Benchmark Comparisons',
-    description: 'Run regular employee pulse surveys and compare your scores against industry benchmarks. Identify satisfaction drivers and track trends over time.',
-    features: ['Customisable question sets', 'Industry benchmarks', 'Department breakdown', 'Sentiment trend analysis'],
-    status: 'soon',
-    href: '#',
-    color: '#f472b6',
-  },
-  {
-    icon: Star,
-    title: 'Performance Review Generator',
-    tagline: 'Competency-Aligned Review Templates',
-    description: 'Generate data-driven performance review templates aligned to your competency framework. Reduce review bias and ensure consistency across managers.',
-    features: ['Competency framework alignment', 'Objective-based scoring', 'Manager calibration guide', 'Development plan integration'],
-    status: 'soon',
-    href: '#',
-    color: '#fb923c',
   },
 ];
 
@@ -96,8 +56,8 @@ export default function HRToolsPage() {
       </section>
 
       <section className="py-16 bg-sand">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {TOOLS.map((tool, i) => {
               const Icon = tool.icon;
               const isLive = tool.status === 'live';
