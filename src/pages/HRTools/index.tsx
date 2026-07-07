@@ -56,7 +56,7 @@ export default function HRToolsPage() {
       </section>
 
       <section className="py-16 bg-sand">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {TOOLS.map((tool, i) => {
               const Icon = tool.icon;
