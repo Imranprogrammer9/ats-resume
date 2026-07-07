@@ -125,7 +125,8 @@ export default function Navbar() {
               onMouseLeave={() => setOpenDropdown(null)}
             >
               {item.children ? (
-                <button
+                <Link
+                  to={item.href}
                   className={`flex items-center gap-1 nav-link ${
                     location.pathname.startsWith(item.href) ? '!text-brass-light' : ''
                   }`}
@@ -135,7 +136,7 @@ export default function Navbar() {
                     size={13}
                     className={`transition-transform duration-200 ${openDropdown === item.label ? 'rotate-180' : ''}`}
                   />
-                </button>
+                </Link>
               ) : (
                 <Link
                   to={item.href}
