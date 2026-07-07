@@ -14,7 +14,7 @@ export default function CTASection() {
         }}
       />
 
-      <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
