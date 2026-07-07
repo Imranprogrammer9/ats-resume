@@ -1,11 +1,6 @@
 const ROW_ONE = [
-  'Financial Services', 'Technology & SaaS', 'Healthcare & MedTech',
-  'Retail & E-commerce', 'Logistics & Supply Chain', 'Energy & Utilities',
-];
-
-const ROW_TWO = [
-  'Professional Services', 'Manufacturing & Industry', 'Education & EdTech',
-  'Biotech & Pharma', 'Hospitality & Leisure', 'Real Estate & Construction',
+  'ATS Resume', 'Recruitment', 'LinkedIn Optimization',
+  'Attrition Predictor', 'Employee Attrition Predictor', 'Resume Analyzer',
 ];
 
 function MarqueeRow({ items, reverse = false }: { items: string[]; reverse?: boolean }) {
@@ -48,12 +43,11 @@ export default function TrustedBy() {
       style={{ background: '#0E1F15' }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8 text-center">
-        <p className="section-label">Sectors Covered</p>
-        <p className="text-slate-light text-sm font-light">Tailored HR frameworks for leaders across major industries</p>
+        <p className="section-label">Our Expertise</p>
+        <p className="text-slate-light text-sm font-light">Tailored tools and professional HR services to empower your workforce</p>
       </div>
       <div className="flex flex-col gap-4">
         <MarqueeRow items={ROW_ONE} />
-        <MarqueeRow items={ROW_TWO} reverse />
       </div>
     </section>
   );
