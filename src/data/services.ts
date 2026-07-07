@@ -81,14 +81,4 @@ export const SERVICES: Service[] = [
     description: 'Customised learning and development programmes aligned to your business strategy. From leadership academies to technical upskilling, we design, deliver, and measure training that sticks.',
     features: ['Learning needs analysis', 'Leadership development', 'Management skills training', 'Technical upskilling', 'Competency framework design', 'Training effectiveness measurement'],
   },
-  {
-    id: 'hr-policy-development',
-    slug: 'hr-policy-development',
-    icon: 'BookOpen',
-    title: 'HR Policy Development',
-    tagline: 'Policies That Protect and Enable',
-    category: 'Consulting',
-    description: 'Comprehensive HR policy design grounded in employment law compliance and SHRM best practices. We create clear, practical policies that protect your organisation and empower your people.',
-    features: ['Policy audit & gap analysis', 'Employee handbook design', 'Compliance framework', 'Grievance & discipline procedures', 'Remote work policies', 'DEI policy development'],
-  },
 ];
