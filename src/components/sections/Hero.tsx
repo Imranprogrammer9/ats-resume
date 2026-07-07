@@ -117,7 +117,7 @@ export default function Hero() {
               </Link>
               <Link
                 to="/hr-tools/attrition-predictor"
-                className="text-sm px-7 py-3.5 font-semibold rounded-full transition-all duration-200 flex items-center gap-2"
+                className="text-sm px-7 py-3.5 font-semibold rounded-lg transition-all duration-200 flex items-center gap-2"
                 style={{
                   color: '#fff',
                   border: '1px solid rgba(255,255,255,0.16)',
