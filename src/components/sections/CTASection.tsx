@@ -36,7 +36,7 @@ export default function CTASection() {
 
           <div className="w-10 h-0.5 bg-brass mx-auto mb-5" />
 
-          <p className="text-slate-light font-light leading-relaxed max-w-lg mx-auto mb-10">
+          <p className="text-slate-light font-light leading-relaxed mb-10">
             Book a free 30-minute consultation. No obligations, no hard sells — just an honest conversation about your people challenges and how we can help.
           </p>
 
